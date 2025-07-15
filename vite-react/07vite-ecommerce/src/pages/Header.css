@@ -1,0 +1,137 @@
+.header{
+    background-color: black;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem 5rem;
+    color: white;
+    font: 1.1rem sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid 12px white;
+}
+
+.header h2{
+    position: relative;
+}
+
+.header h2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.header .headerRight{
+    display: flex;
+    padding: 2px;
+}
+
+.headerRight form{
+    overflow:hidden;
+    display: flex;
+}
+
+.headerRight .formDiv{
+    display: flex;
+    position: relative;
+}
+
+.headerRight form .closeInput{
+    padding: 0 0.5rem;
+    border: none;
+    width: 94px;
+    transition: all 0.5s;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 0 0.5rem;
+    height: 100%;
+}
+
+.headerRight form .showInput{
+    background-color: white;
+    width:270px;
+    transition:all 0.5s;
+    font-size: 1.2rem;
+    outline: none;
+    offset: none;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 0 0.5rem;
+    color: black;
+}
+
+.headerRight form span{
+    position: absolute;
+    right: 10px;
+    height: 99%;
+    background-color: var(--primary);
+    margin-left: 10px;
+    cursor: pointer;
+    padding-left: 4px;
+}
+
+.headerRight form .search{
+    font-size: 2rem;
+    padding: 3px 2px 2px;
+}
+
+.header .headerUi{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.headerUi li{
+    border-radius: 4px;
+    list-style-type: none;
+    padding: 0.4rem;
+}
+
+.headerUi li:hover a{
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 800px){
+
+    .header{
+        padding: 0.5rem 1.5rem;
+    }
+
+    .header .headerRight{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .headerRight form .closeInput{
+        width: 0;
+        padding: 0;
+    }
+
+    .headerRight .formDiv{
+        padding-right: 10px;
+        height: 2rem; 
+    }
+
+    .headerRight form span{
+        padding-bottom: -0.2rem;
+    }
+
+    .headerUi li{
+        margin-right: 2px;
+        padding: 0.3rem;
+    }
+
+    .headerUi li a{
+        font-size: 1.1rem;
+    }
+
+    .headerRight form .search{
+        padding-bottom: 2px;
+    }
+}
+    
