@@ -1,0 +1,148 @@
+
+      .job-list {
+            height: 300px;
+            width:100px;
+            overflow-y: scroll;
+        }
+
+        .tab-link {
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            margin-right: 1rem;
+            color: black;
+            text-decoration: none !important;
+        }
+
+        .tab-link.active {
+            border-color: blue;
+            color: blue;
+        }
+
+        .search-input {
+            max-width: 200px;
+            height: 40px;
+        }
+
+
+        .job-card {
+            background-color: #FFFFFF;
+
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .badge-custom {
+            background-color: #E3E6FF;
+            color: #1A2FE7;
+            font-size: 14px;
+            width: 93px;
+            height: 24px;
+            border-radius: 30px;
+            padding: 2px 18px;
+        }
+
+        .company-logo {
+            width: 98px;
+            height: 37px;
+            object-fit: contain;
+        }
+
+        .quick-apply {
+            background-color: #F6F7F9;
+            border: none;
+            font-size: 14px;
+            width: 100%;
+            padding: 8px;
+            font-weight: 500;
+            color: #000000;
+            margin: auto;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+
+        .quick-apply:hover{
+           background-color: #000000;
+           color: white;
+        }
+
+        .text-small {
+            font-size: 0.9rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .text-color {
+            color: #43464D !important;
+        }
+
+        .text-small {
+            font-size: 16px;
+        }
+
+        i {
+            font-size: 16px;
+        }
+
+        .fs-14px {
+            font-size: 14px;
+        }
+
+        .job-container {
+            height: 400px;
+            overflow-y: scroll;
+        }
+
+        h4 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #212529;
+        }
+        .bg-gray{
+            background-color: #F6F7F9;
+        }
+
+@media (max-width: 768px) {
+     
+    .col-md-4 {
+        flex: 0 0 auto !important;
+        width: 49.333333% !important;
+        height: 250px !important;
+    }
+
+    .job-title{
+        font-size: 16px !important;
+    }
+
+    .company-logo {
+    width: 100px !important;
+    height: 30px !important;
+    }
+
+    .badge-custom{
+        font-size: 12px !important;
+        width: 84px !important;
+    }
+
+    .fs-14px{
+        font-size: 12px !important;
+    }
+
+    .text-small{
+        font-size: 15px !important;
+    }
+    .seaech{
+        margin-top: 20px !important;
+        font-size: 20px !important;
+    }
+}
+@media (max-width:640px) {
+    .col-md-4{
+        width: 100% !important;
+    }
+}
+ 

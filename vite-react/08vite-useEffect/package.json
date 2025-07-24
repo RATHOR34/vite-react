@@ -1,5 +1,5 @@
 {
-  "name": "07vite-ecommerce",
+  "name": "react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "axios": "^1.11.0",
-    "bootstrap": "^5.3.7",
-    "bootstrap-icons": "^1.13.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^6.30.1",
-    "tailwindcss": "^4.1.11"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
