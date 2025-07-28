@@ -1,29 +1,47 @@
-import { useState } from "react"
+import { useState,useContext } from "react"
 import "./login.css"
- 
+import { useNavigate } from "react-router-dom" 
+import { Link } from "react-router-dom"
+import { ProfileContext } from "../App"
+import Profile from "./Profile"
 function Login() {
-    const [userProfile, setUserProfile] = useState({
-           email: "",
-           password: ""
-      })
-     
-    function handleInput(e){
+   
+    const [ username,setUsername] = useState("")
+    const [ password,setPassword] = useState("")
     
-    setUserProfile(prev=>
-    ({...prev,[e.target.name]: e.target.value})    
-    )
- }
+    const navigate = useNavigate()
+    const { setProfileData }  = useContext(ProfileContext)
+    
+    // const [userProfile, setUserProfile] = useState({
+    //        email: "",
+    //        password: ""
+    //   })
+     
+//     function handleInput(e){
+    
+//     setUserProfile(prev=>
+//     ({...prev,[e.target.name]: e.target.value})    
+//     )
+//  }
   
+let profile = {name:"chanchal",
+    Email:"racthor123@gmail.com"
+}
 
+
+profile.name= "chanchal Rathor"
+profile["Email"] ="rathorchanchal695@gmail"
+
+console.log(profile)
  function handleLogin(e){
     e.preventDefault()
-    console.log(userProfile)
-    setUserProfile({
-        email:"",
-        password:""
-    })
-    
- }
+    // console.log(username,password)
+    setProfileData({username: username,password: password})
+     
+      setUsername("")
+      setPassword("")
+      navigate("/")
+}
 
     return (
         <div className="login">
@@ -32,24 +50,25 @@ function Login() {
                     <h2 className="form-title">Login</h2>
                     <form method="post" onSubmit={handleLogin}>
                         <input
+                            required
                             className="form-input"
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            value={userProfile.email}
-                            onChange={handleInput} required
+                            type="text"
+                            name="username"
+                            placeholder="Enter your userName"
+                            value={username}
+                            onChange={(e) => { setUsername(e.target.value)}}  
                         />
                         <input
                             className="form-input"
                             type="password"
                             name="password"
                             placeholder="Enter your password"
-                            value={userProfile.password}
-                            onChange={handleInput} required
+                            value={password}
+                            onChange={(e) => { setPassword(e.target.value)}} required
                         />
                         <div className="form-actions">
                            <button type="submit" className="login-button"> Login</button> 
-                            <p className="forgot-password">Forgot password?</p>
+                           <p>Don't have an account? <Link to="/sign-up" style={{ fontWeight: "700", }}>Create</Link></p>
                         </div>
                     </form>
                 </div>

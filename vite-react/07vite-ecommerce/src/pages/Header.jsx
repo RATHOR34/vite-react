@@ -1,10 +1,13 @@
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom"; 
+import { ProfileContext } from "../App";
 // import SearchIcon from "@mui/icons-material/Search";  
 
-
+// const { profileData } = useContext(ProfileContext)
+ 
 function Header() { 
+  const { profileData } = useContext(ProfileContext)
   const [showsearchInput, setShowsearchInput] = useState(false)
   const [inputValue, setInputValue] = useState("") 
 
@@ -45,7 +48,11 @@ function Header() {
         <ul className="headerUl">
              <li> <Link to="/products">Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
+             {(profileData.username != undefined)? 
+              // <p>{profileData.username}</p> :
+             <li><Link to="/profile">Profile</Link></li> :  
              <li> <Link to="/signup">Sign-up</Link> </li>
+             }
         </ul>
       </div>
     </div>
