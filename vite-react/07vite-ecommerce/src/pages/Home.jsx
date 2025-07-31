@@ -1,7 +1,9 @@
 import heroImage from "../assets/images/heroImage.webp"
+import ProductDetail from "../assets/components/ProductDetail"
 function Home(){
     return(
         <>
+   
           <div className="w-full">
              <div className="relative w-full">
                 <img src={heroImage} alt="hero" />

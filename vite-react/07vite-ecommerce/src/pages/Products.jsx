@@ -12,7 +12,7 @@ function Products() {
     axios.get("https://fakestoreapi.com/products")
     .then((res)=>{
               //  console.log(res.data);
-               setProductsData(res.data)
+              setProductsData(res.data)
     })
   }
   fetchData()
@@ -37,8 +37,8 @@ function Products() {
 
   return ( 
     <div className="row gap-4 m-auto container">
-      {productsData.map((product) => (
-        <ProductCard key={product.id}  data={product} />
+      {productsData.map((product,index) => (
+        <ProductCard key={index}  productData={product} />
       ))}
     </div>
   );

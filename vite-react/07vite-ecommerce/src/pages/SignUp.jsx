@@ -16,9 +16,8 @@ function SignUp() {
 // const [userProfile,setUserProfile] = useState({})
 
  function handleSubmit(e){
-  // e.preventDeafault()
-  // console.log(name,email,phone,username,password)
-  console.log("hello")
+  e.preventDeafault()
+  console.log(name,email,phone,username,password)
  }
  console.log("hello")
   return (

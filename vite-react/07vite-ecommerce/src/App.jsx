@@ -6,6 +6,8 @@ import Products from "./pages/Products.jsx"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import Profile from "./pages/Profile.jsx"
+import ProductCard from "./assets/components/ProductCard.jsx"
+import ProductDetail from "./assets/components/ProductDetail.jsx"
 import SignUp from "./pages/SignUp"
 // import Register from "./pages/Register"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -16,9 +18,10 @@ export const ProfileContext = createContext()
 
 function App() {
   const [profileData,setProfileData] = useState({})
- console.log(profileData)
+  const [productDetail,setProductDetail] = useState({})
+//  console.log(profileData)
   return (
-    <ProfileContext.Provider value={{profileData,setProfileData}}> 
+    <ProfileContext.Provider value={{profileData,setProfileData,productDetail,setProductDetail}}> 
     <div style={{ minHeight: "100vh" }}>
       <div className="max-w-[1460px]"></div>
       <BrowserRouter>
@@ -34,6 +37,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/productDetail" element={<ProductDetail />} />
             
         </Routes>
         <Footer />

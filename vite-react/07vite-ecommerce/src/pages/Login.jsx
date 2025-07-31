@@ -1,6 +1,6 @@
 import { useState,useContext } from "react"
 import "./login.css"
-import { useNavigate } from "react-router-dom" 
+import { json, useNavigate } from "react-router-dom" 
 import { Link } from "react-router-dom"
 import { ProfileContext } from "../App"
 import Profile from "./Profile"
@@ -24,23 +24,33 @@ function Login() {
 //     )
 //  }
   
-let profile = {name:"chanchal",
-    Email:"racthor123@gmail.com"
-}
+// let profile = {name:"chanchal",
+//     Email:"racthor123@gmail.com"
+// }
 
 
-profile.name= "chanchal Rathor"
-profile["Email"] ="rathorchanchal695@gmail"
+// profile.name= "chanchal Rathor"
+// profile["Email"] ="rathorchanchal695@gmail"
+// console.log(profile)
 
-console.log(profile)
  function handleLogin(e){
     e.preventDefault()
     // console.log(username,password)
-    setProfileData({username: username,password: password})
+    // setProfileData({username: username,password: password})
+
+    let data = JSON.parse(localStorage.getItem("userData"))
      
+    if(data.username === username && data.password === password){
+        alert("you have successfully logged in")
+        navigate("/")
+    }else{
+        alert("sorry wrong password or username")
+        navigate("/login")
+    }
+
       setUsername("")
       setPassword("")
-      navigate("/")
+     
 }
 
     return (

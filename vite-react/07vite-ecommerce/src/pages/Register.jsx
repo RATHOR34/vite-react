@@ -26,6 +26,10 @@ function Register() {
  function handleRegister(e){
     e.preventDefault()
     console.log(userProfile)
+
+    
+    localStorage.setItem("userData", JSON.stringify(userProfile) )
+   
     setUserProfile({
         name:"",
         phone:"",
