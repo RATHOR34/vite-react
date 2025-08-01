@@ -1,0 +1,50 @@
+body{
+    background: midnightblue;
+}  
+
+
+.inner-div{
+    padding: 25px;
+}
+
+input{
+
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 1px solid #ccc;
+    border-radius: 6px;  
+                                  
+}
+
+.main-div{
+   display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  color: white;
+  background: repeating-linear-gradient(45deg, black, transparent 100px);
+  padding: 80px;
+   
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-div button{
+    background-color: white;
+    margin-top: 20px;
+}
+
+.main-div button:hover{
+    background-color: white !important;
+    color: black!important;
+}
+
+.main-div p{
+    margin-top: 34px;
+}
+
+.main-div h1{
+font-size: 40px;
+}

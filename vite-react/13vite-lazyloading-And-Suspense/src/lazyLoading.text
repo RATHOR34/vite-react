@@ -1,0 +1,3 @@
+lazy loading
+
+//react can lazy load components so they are only loaded when needed - reduce initial bundle size

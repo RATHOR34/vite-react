@@ -5,6 +5,7 @@ import './App.css'
 function App() {
  
   const inputRef = useRef(null)
+   let pararef = useRef("")
   
   function handleClick(){
        console.log(inputRef.current.focus())
@@ -17,12 +18,21 @@ function App() {
     inputRef.current.value = ""
   }
 
+
+   function handle() {
+        console.log(pararef.current.innerHTML)
+        pararef.current.innerHTML = "yes i have changed you";
+        pararef.current.style.color = "red"
+
+    }
   return (
       <div>
-        <h1>useRef</h1>
+        <h1 ref={pararef}>useRef</h1>
         <input type="text" ref={inputRef} />
         <button onClick={handleClick}>focus</button>
         <button onClick={handleBlur}>Blur</button>
+         <button onClick={handle}>useRef</button>
+
       </div>
   )
 }
