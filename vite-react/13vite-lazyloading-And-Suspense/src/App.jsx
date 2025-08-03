@@ -8,7 +8,7 @@ function App() {
    
   return (
     <>
-       <Suspense fallback={<div>Loading..</div>}>
+       <Suspense fallback= {<Spinner />}>
            <Homepage />
        </Suspense>
     </>
