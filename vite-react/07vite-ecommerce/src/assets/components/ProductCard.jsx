@@ -1,23 +1,31 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ProfileContext } from '../../App'
-
+import { useSelector,useDispatch } from 'react-redux'
+import { addToCart } from '../../redux/features/cartSlice'
 
 function ProductCard({productData}){
     
-    let navigate = useNavigate() 
+    
+   
     const {setProductDetail} = useContext(ProfileContext)
-
+    // const [cartItems,setCartItems] = useState([])
+    const dispatch = useDispatch()
+    const cartItems = useSelector(state => state.cart)
+    
+    console.log(cartItems)
+    
     function handleProductClick(productData){
         
         localStorage.setItem("productDataId",productData.id)
-        console.log(productData)
+        // console.log(productData)
          setProductDetail(productData)
         
           navigate("/productDetail")
     }
 
+ 
     return(
         <div key={productData.id} className="col-md-4 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-4" height="300px">
             <img src={productData.image} 
@@ -34,7 +42,7 @@ function ProductCard({productData}){
                  
                  <div className="flex items-center justify-between mt-4">
                     <span className="text-lg font-bold text-indigo-600"><i className="bi bi-currency-rupee"></i>{productData.price}</span>
-                    <button style={{padding:"3px 6px",backgroundColor:"indigo"}} className="px-4 py-4 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition duration-200">
+                    <button onClick={() => dispatch(addToCart(productData))} style={{padding:"3px 6px",backgroundColor:"indigo"}} className="px-4 py-4 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition duration-200">
                         Add to cart
                     </button>
                  </div>

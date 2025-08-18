@@ -12,6 +12,7 @@ import SignUp from "./pages/SignUp"
 // import Register from "./pages/Register"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { createContext, useState } from "react"
+import CartPage from "./pages/CartPage.jsx"
 
 export const ProfileContext = createContext()
  
@@ -38,7 +39,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/productDetail" element={<ProductDetail />} />
-            
+          <Route path="/productcard" element={<ProductCard />} />
+            <Route path="/cart" element={ <CartPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

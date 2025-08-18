@@ -2,15 +2,14 @@ import React, { useEffect, useState,useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom"; 
 import { ProfileContext } from "../App";
-// import SearchIcon from "@mui/icons-material/Search";  
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useSelector } from "react-redux";
 
-// const { profileData } = useContext(ProfileContext)
- 
 function Header() { 
-  const { profileData } = useContext(ProfileContext)
+  
   const [showsearchInput, setShowsearchInput] = useState(false)
   const [inputValue, setInputValue] = useState("") 
-
+  const {cartItems} = useSelector(state => state.cart)
 
   function handlonMouseOver(){ 
       setShowsearchInput(true)
@@ -48,11 +47,11 @@ function Header() {
         <ul className="headerUl">
              <li> <Link to="/products">Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
-             {(profileData.username != undefined)? 
-              // <p>{profileData.username}</p> :
-             <li><Link to="/profile">Profile</Link></li> :  
+             
+             <li><Link to="/profile">Profile</Link></li> 
              <li> <Link to="/signup">Sign-up</Link> </li>
-             }
+             <li style={{position:"relative"}}> <Link to="/cart"> <ShoppingCartIcon sx={{fontSize: 30}} /><span style={{position:"absolute",right:"12px", top:"-5px" ,backgroundColor:"red" ,color:"white",width:"25px",height:"25px" ,borderRadius:"50%",padding:"3px 6px 0",border:"2px solid white"}}>{cartItems.length}</span></Link> </li>
+             
         </ul>
       </div>
     </div>
