@@ -13,7 +13,8 @@ function ProductCard({productData}){
     // const [cartItems,setCartItems] = useState([])
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart)
-    
+     let navigate = useNavigate()
+
     console.log(cartItems)
     
     function handleProductClick(productData){
