@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
     return (
-        <div className="container">
+        <div className="container" style={{marginTop:"90px"}}>
             <div className="row pt-3">
                 <div className="col-lg-7">
                     <div className="form-section">

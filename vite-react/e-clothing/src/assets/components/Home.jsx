@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function Home() {
     return (
         <> 
-        <div className="container pt-2">
+        <div className="container" style={{marginTop:"110px"}}>
             <Slider />
             <div className="wrapper-content-banner row gx-4 gy-4  m-auto">
                 {categoryImages.map((img) => (

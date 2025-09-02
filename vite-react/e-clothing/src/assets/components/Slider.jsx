@@ -8,6 +8,7 @@ function Slider() {
       className="carousel slide"
       data-bs-touch="false"
       data-bs-ride="carousel"
+     
     >
       <div className="carousel-inner">
         {sliderImages.map((img, index) => (

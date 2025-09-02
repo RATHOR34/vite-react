@@ -29,7 +29,7 @@ function Product() {
 
   return (
 
-    <div className="container">
+    <div className="container" style={{marginTop:"90px"}}>
       <div className="row pt-4  ">
         <div className="col-md-4 pt-4 light-bg rounded-3 border">
           <h5 className="ps-3 fw-bold text-white">BROWSE CATEGORIES</h5>

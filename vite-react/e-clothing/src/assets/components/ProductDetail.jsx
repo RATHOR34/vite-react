@@ -30,7 +30,7 @@ function ProductDetail() {
   return (
     <div>
 
-      <div className="container">
+      <div className="container" style={{marginTop:"90px"}}>
         <div className="row pt-4">
           <div className="col-md-4 mt-3 mt-lg-0" key={product.id}>
             <a href="" className="d-inline-block text-decoration-none">

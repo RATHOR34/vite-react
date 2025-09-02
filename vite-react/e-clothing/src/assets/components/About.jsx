@@ -5,7 +5,7 @@ function About() {
     return (
 
 
-        <div className="container">
+        <div className="container" style={{marginTop:"90px"}}>
             <div className="row py-4">
                 {aboutDetail.map((about, index) => (
                     <div className="col-md-6 text-center pb-1" style={{ background: "#f9f9f9" }} key={about.id}>

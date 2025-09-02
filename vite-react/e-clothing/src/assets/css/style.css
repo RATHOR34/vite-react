@@ -106,8 +106,6 @@
       object-fit: cover;
     }
 
-
-
     /* ------Navbar Styles-------- */
     .navbar {
       background-color: #fff;
@@ -234,139 +232,166 @@
       font-family: "Mier demi";
     }
 
-    .light-color{
-       background-color:#f9f9f9
+    .light-color {
+      background-color: #f9f9f9
     }
 
-    
-  .light-blue{
-    color: #008DB1;
-  }
 
-  .light-bg{
-    background-color: #008DB1;
-  }
+    .light-blue {
+      color: #008DB1;
+    }
 
-  /* productpage css */
-   .old-price {
-        text-decoration: line-through;
-        color: gray;
-        font-size: 14px;
+    .light-bg {
+      background-color: #008DB1;
+    }
+
+    /* .cart {
+      font-size: 16px;
+      font-weight: 400;
+      border: none; 
+      color: white;
+      letter-spacing: 0.5px;
+      border-radius: 16px;
+      padding: 8px 8px;
+      line-height: 1.5;
+      text-align: left;
+
+    } */
+
+    /* productpage css */
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 14px;
     }
 
     .new-price {
-        color: #008DB1;
-        font-weight: bold;
-        font-size: 16px;
+      color: #008DB1;
+      font-weight: bold;
+      font-size: 16px;
     }
 
     .countdown {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
     }
 
     .timer-box {
-        background: black;
-        color: white;
-        padding: 8px 12px;
-        text-align: center;
-        font-size: 12px;
+      background: black;
+      color: white;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 12px;
     }
 
     .timer-box span {
-        display: block;
-        font-size: 10px;
-        margin-top: 3px;
-        color: #ccc;
+      display: block;
+      font-size: 10px;
+      margin-top: 3px;
+      color: #ccc;
     }
 
     /* faqPage style */
-     .faq-box {
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
+    .faq-box {
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
 
-        .faq-question {
+    .faq-question {
 
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .faq-question:hover {
-            color: #007BFF;
-        }
+    .faq-question:hover {
+      color: #007BFF;
+    }
 
-        .faq-answer {
-            margin-top: 15px;
-            display: none;
-        }
+    .faq-answer {
+      margin-top: 15px;
+      display: none;
+    }
 
-        .faq-box.active .faq-answer {
-            display: block;
-        }
+    .faq-box.active .faq-answer {
+      display: block;
+    }
 
-        .arrow-up::after {
-            content: '▲';
-            font-size: 0.7rem;
-            color: #aaa;
-        }
+    .arrow-up::after {
+      content: '▲';
+      font-size: 0.7rem;
+      color: #aaa;
+    }
 
-        
 
-        /* contactPage css */
-                .contact-header {
-            background-color: #fff;
-            padding: 60px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
 
-        
-        .form-section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+    /* contactPage css */
+    .contact-header {
+      background-color: #fff;
+      padding: 60px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
 
-        .contact-info {
-            padding: 40px;
-        }
-  
-        /* About Page css */
-           .member {
-            text-align: center;
-        }
 
-         .member img {
-            border-radius: 100%;
-            width: 300px;
-        
-        }    
-        .member h5 {
-            color: #626c9c;
-            font-size: 20px;
-            padding: 10px 0px;
-        }
+    .form-section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
 
-        .member p {
-            color: #737583;
-        }
+    .contact-info {
+      padding: 40px;
+    }
 
-        .icons {
-            width: 165px;
-            padding: 15px 0px;
-            margin: auto;
-        }
+    /* About Page css */
+    .member {
+      text-align: center;
+    }
 
-        .icons i {
-            background-color: #f1f5fe;
-            padding: 10px;
-            color: #008DB1;
-        }
+    .member img {
+      border-radius: 100%;
+      width: 300px;
+
+    }
+
+    .member h5 {
+      color: #626c9c;
+      font-size: 20px;
+      padding: 10px 0px;
+    }
+
+    .member p {
+      color: #737583;
+    }
+
+    .icons {
+      width: 165px;
+      padding: 15px 0px;
+      margin: auto;
+    }
+
+    .icons i {
+      background-color: #f1f5fe;
+      padding: 10px;
+      color: #008DB1;
+    }
+
+    .dropdown-menu {
+      --bs-dropdown-link-active-bg: none !important;
+    }
+
+    .navbar {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+    }

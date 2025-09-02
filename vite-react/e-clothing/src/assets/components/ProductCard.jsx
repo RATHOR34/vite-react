@@ -18,7 +18,7 @@ function ProductCard({ product }) {
     }
 
     return (
-        <div className="col-12 col-sm-6 col-md-3" key={product.id}>
+        <div className="col-12 col-sm-6 col-md-3" key={product.id}  >
             <a href="" className="d-inline-block text-decoration-none w-100 h-100">
                 <div className="p-3 border rounded shadow-sm h-100">
                     <div style={{ width: "100%" }}>
@@ -30,7 +30,7 @@ function ProductCard({ product }) {
                             onClick={() => handleProductClick(product)}
                         />
                     </div>
-                    <div className="align-items-left py-3">
+                    <div className="align-items-left py-3" style={{textAlign:"left"}} >
                         <p className="title">
                             {product.title.length < 20 ? product.title : `${product.title.substring(0, 20)}...`}
                         </p>

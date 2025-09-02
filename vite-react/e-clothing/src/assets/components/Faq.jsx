@@ -12,7 +12,7 @@ function Faq() {
   };
 
   return (
-    <div>
+    <div style={{marginTop:"90px"}}>
       {/* General Information Section */}
       <div style={{ backgroundColor: "#f9f9f9" }}>
         <div className="container">
